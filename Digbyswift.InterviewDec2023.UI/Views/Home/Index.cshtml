@@ -2,10 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model Digbyswift.InterviewDec2023.UI.Models.HomeModel
+
 <div class="text-center">
     <h1 class="display-4">Staff List</h1>
-    <p>Select to load <select>
-        <option>Select one</option>
+    <p>
+        Select to load
+        <select id="staffSelectList" class="form-select" asp-items="Model.StaffSelectList" onselect="StaffSelectionChanged()">
+        <option>Please select a member of staff</option>
     </select></p>
-    <div id="staff-container"></div>
+    <div id="staff-container">
+    </div>
 </div>
+
+<script type="text/javascript">
+
+
+    function StaffSelectionChanged() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open(@Url.Action("GetSelectedStaffMember", "Home");
+
+        var selected = document.getElementById("staffSelectList").getElementById
+        xmlHttp.send(selected)
+
+        var element = document.getElementById("staff-container");
+        element.innerHTML = xmlHttp.responseText;
+    }
+
+
+</script>

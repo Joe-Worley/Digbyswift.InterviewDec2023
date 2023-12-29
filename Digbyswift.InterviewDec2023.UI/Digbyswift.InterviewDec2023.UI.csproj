@@ -24,4 +24,13 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\LICENSE.md" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="xunit.assert" Version="2.6.4" />
+      <PackageReference Include="xunit.extensibility.core" Version="2.6.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Digbyswift.InterviewDec2023.Infrastructure\Digbyswift.InterviewDec2023.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
